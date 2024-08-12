@@ -17,7 +17,11 @@ function sum(n) {
         return 1;
     }
 
-    return (n * (n + 1)) / 2;
+    // n *= (n + 1);
+    // n /= 2;
+    // return n;
+    return (n * (n + 1)) /  2;
 }
+console.log(sum(5));
 
 module.exports = sum;

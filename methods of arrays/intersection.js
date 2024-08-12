@@ -4,9 +4,16 @@
  * @param {number[]} arr2 - второй входной массив чисел
  * @return {number[]} - массив, содержащий только элементы, которые есть в обоих массивах
  */
-let globalArr = [];
+
+
+
 function intersect(arr1, arr2) {
-    return (globalArr = arr1.filter((i) => arr2.includes(i)));
+    return arr1.reduce((acc, el) => {
+        if (arr2.includes(el) && !acc.includes(el)) {
+            acc.push(el);
+        }
+        return acc;
+    }, []);
 }
-intersect([12, 21, 22], [12, 22, 22]);
-console.log(globalArr);
+console.log(intersect([12, 21, 22], [12, 22, 22]));
+

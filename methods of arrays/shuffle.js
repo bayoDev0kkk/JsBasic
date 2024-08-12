@@ -4,12 +4,13 @@
  вернуть [3, 1, 5, 4, 2].
  * */
 function shuffle(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+    arr.sort(() => Math.random() - 0.7);
 
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
+    // for (let i = arr.length - 1; i > 0; i--) {
+    //     let j = Math.floor(Math.random() * (i + 1));
+    //     [array[i], array[j]] = [array[j], array[i]];
+    // }
 }
-const array = [1, 2, 3, 4, 5];
+const array = [3, 2, 7, 4, 15];
 shuffle(array);
 console.log(array);

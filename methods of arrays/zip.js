@@ -4,14 +4,14 @@
  совпадают, функция должна вернуть массив, длина которого равна длине более короткого из двух массивов. Например,
  zip([1, 2, 3], ['a', 'b', 'c']) должна вернуть [[1, 'a'], [2, 'b'], [3, 'c']].
  * */
-function zip(arr1, arr2) {
-    const minLength = Math.min(arr1.length, arr2.length);
-    const result = [];
 
-    for (let i = 0; i < minLength; i++) {
+let result = [];
+function zip(arr1, arr2) {
+    let minArr = Math.min(arr1.length, arr2.length);
+
+    for (let i = 0; i < minArr; i++) {
         result.push([arr1[i], arr2[i]]);
     }
     return result;
 }
 console.log(zip([1, 2, 3], ["a", "b", "c"]));
-

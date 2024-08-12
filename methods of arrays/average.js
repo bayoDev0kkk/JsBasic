@@ -7,9 +7,9 @@
 let age = [12, 31, 22, 24];
 
 function average(arr) {
-    const ageSum = arr.reduce((accumulator, el) => {
-        return accumulator + el;
+    const ageSum = arr.reduce((acc, el) => {
+        return acc + el / arr.length;
     }, 0);
-    return ageSum / arr.length;
+    return ageSum;
 }
 console.log(Math.round(average(age)));

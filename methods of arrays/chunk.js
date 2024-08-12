@@ -4,11 +4,9 @@
  * */
 const sliced_arr = [];
 function chunk(arr, size) {
-    for (let i = 0; i < arr.length; i += size) {
-        console.log(i);
-
-        sliced_arr.push(arr.slice(i, i + size));
+    for (let i = 0; i <= arr.length; i += size) {
+        console.log(sliced_arr.push(arr.slice(i, i + size)));
     }
 }
-chunk([12, 12, 12, 21, 123, 32], 2);
+chunk([12, 12, 12, 21, 123], 2);
 console.log(sliced_arr);
