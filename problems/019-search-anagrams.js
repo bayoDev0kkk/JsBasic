@@ -12,24 +12,24 @@
  * @returns {string}
  */
 function searchAnagrams(value) {
-     const sortedString = (str) => str.toLowerCase().split('').sort().join('');
-
-     const words = value.match(/\b\w+\b/g) || [];
-     
-     const seenAnagrams = new Set();
-     const anagrams = [];
- 
-     for (const word of words) {
-         const sortedWord = sortedString(word);
-         if (!seenAnagrams.has(sortedWord)) {
-             const isAnagram = words.some(w => w !== word && sortedString(w) === sortedWord);
-             if (isAnagram) {
-                 anagrams.push(word);
-                 seenAnagrams.add(sortedWord);
-             }
-         }
-     }
- 
-     return anagrams.join('');
- }
+    const words = value.split(/[\s,.!?;:()]+/);
+    let arrWords = [];
+  
+    function anagram(x, y) {
+      const firstWord = x.toUpperCase().split("").sort().join();
+      const secondWord = y.toUpperCase().split("").sort().join();
+  
+      return firstWord === secondWord;
+    }
+  
+    words.forEach((word, index) => {
+      for (let i = 0; i < words.length; i++) {
+        if (anagram(word, words[i])) {
+          if (i !== index && !arrWords.includes(word)) arrWords.push(word);
+        }
+      }
+    });
+  
+    return arrWords.join(" ");
+  }
 module.exports = searchAnagrams;

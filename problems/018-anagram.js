@@ -15,12 +15,12 @@
  * @returns {boolean}
  */
 function anagram(x, y) {
-    const normalize = (str) => str.toLowerCase().replace(/[^a-zа-я]/g, "");
+    const normalize = (str) => str.toLowerCase();
 
     const normX = normalize(x);
     const normY = normalize(y);
 
-    const isOnlyLetters = (str) => /^[a-zа-я]+$/.test(str);
+    const isOnlyLetters = (str) => /[a-zа-я]/.test(str);
     const sortedX = normX.split("").sort().join("");
     const sortedY = normY.split("").sort().join("");
 

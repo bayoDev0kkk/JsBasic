@@ -16,11 +16,11 @@ function sum(n) {
     if (n <= 0) {
         return 1;
     }
-
-    // n *= (n + 1);
-    // n /= 2;
-    // return n;
-    return (n * (n + 1)) /  2;
+    let res = 0;
+    for (let i = 0; i <= n; i++) {
+        res += i;
+    }
+    return res;
 }
 console.log(sum(5));
 

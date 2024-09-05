@@ -6,7 +6,9 @@
  * @return {object} - новый объект, содержащий все свойства обоих объектов
  */
 function mergeObjects(obj1, obj2) {
-    return { ...obj1, ...obj2};
+    return { ...obj1, ...obj2 };
+    // const assignObj = Object.assign(obj1, obj2);
+    // return assignObj;
 }
 
 // Примеры:

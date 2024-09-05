@@ -12,17 +12,16 @@
  * @returns {number|undefined}
  */
 function getPower(n) {
-    if (n <= 0) return undefined; // Не рассматриваем отрицательные числа и ноль
-    
+    if (n <= 0) return undefined;
+
     let power = 0;
     let num = n;
-    
     while (num > 1) {
-        if (num % 2 !== 0) return undefined; // Если число нечетное, значит, не является степенью двойки
+        if (num % 2 !== 0) return undefined;
         num /= 2;
         power++;
     }
-    
+
     return power;
 }
 

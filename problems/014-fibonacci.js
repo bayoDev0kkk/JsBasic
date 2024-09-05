@@ -20,13 +20,14 @@ function fibonacci(n) {
     if (n === 0) return 0;
     if (n === 1) return 1;
 
-    let a = 0,
-        b = 1;
+    let a = 0;
+    let b = 1;
+    let res = 0;
 
-    for (let i = 2; i <= n; i++) {
-        const temp = a + b;
+    for (let i = 1; i < n; i++) {
+        res = a + b;
         a = b;
-        b = temp;
+        b = res;
     }
 
     return b;

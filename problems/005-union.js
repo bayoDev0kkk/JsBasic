@@ -13,10 +13,10 @@
  * @returns {number[]}
  */
 function union(a, b) {
-    const setA = new Set(a);
-    const setB = new Set(b);
-    const intersection = new Set([...setA].filter((item) => setB.has(item)));
-    return Array.from(intersection).sort((x, y) => x - y);
+    const objA = new Set(a);
+    const objB = new Set(b);
+    const result = new Set([...objA].filter((item) => objB.has(item)));
+    return Array.from(result).sort((x, y) => x - y);
 }
 
 module.exports = union;

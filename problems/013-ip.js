@@ -19,16 +19,13 @@
  * @returns {boolean}
  */
 function isIpValid(address) {
-    const parts = address.split(".");
-
-    if (parts.length !== 4) {
+    const partsIp = address.split(".");
+    if (partsIp.length !== 4) {
         return false;
     }
-
-    for (let part of parts) {
+    for (let part of partsIp) {
         const num = Number(part);
-
-        if (num < 0 || num > 255 || isNaN(num) || part === "") {
+        if (num < 0 || num > 255) {
             return false;
         }
     }

@@ -14,20 +14,18 @@
  * @returns {undefined|number}
  */
 function isFibonacci(value) {
-    if (value < 0) return undefined;
-
-    let a = 0,
-        b = 1,
-        index = 0;
+    let a = 0;
+    let b = 1;
+    let index = 0;
 
     if (value === a) return index;
     index++;
 
     while (b <= value) {
         if (b === value) return index;
-        let temp = a + b;
+        let res = a + b;
         a = b;
-        b = temp;
+        b = res;
         index++;
     }
 

@@ -16,21 +16,21 @@
  * @returns {(number|undefined)}
  */
 function getWinner(points) {
-    let team1Score = 0;
-    let team2Score = 0;
+    let teamScore1 = 0;
+    let teamScore2 = 0;
 
     points.forEach((point) => {
-        const [team1, team2] = point.split("-").map(Number);
+        const [score1, score2] = point.split("-").map(Number);
 
-        team1Score += team1;
-        team2Score += team2;
+        teamScore1 += score1;
+        teamScore2 += score2;
     });
-    if (team1Score > team2Score) {
+    if (teamScore1 > teamScore2) {
         return 1;
-    } else if (team2Score > team1Score) {
+    } else if (teamScore1 < teamScore2) {
         return 2;
     } else {
-        return undefined;
+        undefined;
     }
 }
 

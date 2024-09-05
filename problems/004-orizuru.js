@@ -22,8 +22,8 @@
 function computeOrizurus(total) {
     if (total / 6 === 0) {
         const P = total / 6;
-        const K = S + P * 2;
         const S = P;
+        const K = S + P * 2;
         return [P, K, S];
     } else {
         const P = Math.floor(total / 6);

@@ -14,7 +14,7 @@
  * @returns {boolean}
  */
 function checkTicket(number) {
-    const numStr =  number.toString();
+    const numStr = number.toString();
 
     const firstHalf = numStr.slice(0, 3);
     const secondHalf = numStr.slice(3);

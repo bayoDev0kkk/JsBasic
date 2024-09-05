@@ -18,15 +18,15 @@
 function decrypt(secret) {
     return secret
         .split("")
-        .map((char) => {
-            if (char === " ") {
-                return char;
+        .map((ch) => {
+            if (ch === " ") {
+                return ch;
             }
-            const charCode = char.charCodeAt(0);
-            if (char === "a") {
-                return "z";
+            const charCode = ch.charCodeAt(0);
+            if (ch === "z") {
+                return "a";
             }
-            return String.fromCharCode(charCode - 1);
+            return String.fromCharCode(charCode + 1);
         })
         .join("");
 }

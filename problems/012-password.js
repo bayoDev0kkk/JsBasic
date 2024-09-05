@@ -39,6 +39,8 @@ function validatePassword(password) {
         }
     }
     return false;
+
+    // return /[0-9a-zA-Z]/.test(password);
 }
 
 module.exports = validatePassword;

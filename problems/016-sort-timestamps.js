@@ -9,11 +9,11 @@
  * @returns {string[]} отсортированный по возрастанию массив временных моментов
  */
 function sortTimestamps(list) {
-    const convertToSeconds = (timestamp) => {
-        const [hours, minutes, seconds] = timestamp.split(':').map(Number);
+    const convertToSeconds = (timeToSec) => {
+        const [hours, minutes, seconds] = timeToSec.split(":").map(Number);
         return hours * 3600 + minutes * 60 + seconds;
     };
-    
+
     return list.sort((a, b) => convertToSeconds(a) - convertToSeconds(b));
 }
 

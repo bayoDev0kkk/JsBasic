@@ -5,11 +5,11 @@
  * @return {number} - наибольший общий делитель
  */
 function gcd(a, b) {
-    if (b === 0) {
-        return a;
+    if (a > b) {
+        return a = a % b;
+    } else {
+        return (b = b % a);
     }
-    
-    return gcd(b, a % b);
 }
 
 // Примеры:
